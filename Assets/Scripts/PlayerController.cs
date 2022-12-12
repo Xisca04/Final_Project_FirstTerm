@@ -6,14 +6,14 @@ public class PlayerController : MonoBehaviour
 {
     // Movement of the player on the plataform
 
-    private float speed = 22f;
-    private float turnSpeed = 11f;
+    private float speed = 9f;
+    private float turnSpeed = 5f;
     private float horizontalInput;
     private float verticalInput;
 
     // Player's range x limit
-    private float xLimit = 201f;
-    private float xLimitNegative = -58.5f;
+    private float xLimit = 58.5f;
+    private float xLimitNegative = -201f;
 
     // Player's range z limit
     private float zLimit = 38;
@@ -31,7 +31,7 @@ public class PlayerController : MonoBehaviour
         PlayerInBoundsZ();
     }
 
-    private void PlayerInBounds() // Horizontal limits
+    private void PlayerInBounds() // Horizontal limits x
     {
         Vector3 pos = transform.position;
         if (pos.x < xLimitNegative) 
@@ -45,7 +45,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void PlayerInBoundsZ() // Horizontal limits
+    private void PlayerInBoundsZ() // Horizontal limits z
     {
         Vector3 pos = transform.position;
         if (pos.z < -zLimit)

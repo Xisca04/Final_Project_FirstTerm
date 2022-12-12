@@ -4,12 +4,19 @@ using UnityEngine;
 
 public class DetectCollisions : MonoBehaviour
 {
-    // Detect the collission between the player and the collectable
+    //Destroy the collectable and count it
 
-    private void GetCollectables()
+    private void GetCollectables(Collider other) //Destroy the collectable
     {
-        Destroy(gameObject);
+        Destroy(other.gameObject);
         Debug.Log($"Yey! You have got 1 collectable. You are getting closer to winnning!");
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.name.Contains("Collectable"))
+        {
+            GetCollectables(other);
+        }
+    }
 }
