@@ -15,7 +15,7 @@ public class Collectables : MonoBehaviour
     {
         float randomX  = Random.Range(spawnRangeX, spawnRangeNegativeX);
         float randomZ = Random.Range(spawnRangeZ, -spawnRangeZ);
-        return new Vector3(randomX, 0, randomZ);
+        return new Vector3(randomX, 1, randomZ);  // In the Y's axis is 1 because the collectable wouldn't be seen.
     }
 
     private void Start()

@@ -6,8 +6,10 @@ public class PlayerController : MonoBehaviour
 {
     // Movement of the player on the plataform
 
-    private float speed = 9f;
-    private float turnSpeed = 5f;
+    // Player's speed
+    private float speed = 5f;
+    private float turnSpeed = 3f;
+
     private float horizontalInput;
     private float verticalInput;
 
